@@ -1,0 +1,519 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background: #080b12;
+  color: #f5f7fb;
+}
+
+.app {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 50% 10%,
+      #151c32 0%,
+      #080b12 45%
+    );
+}
+
+/* Navbar */
+
+.navbar {
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6%;
+
+  border-bottom: 1px solid #1c2230;
+
+  background: rgba(8, 11, 18, 0.8);
+  backdrop-filter: blur(15px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.logo-icon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #6366f1,
+    #8b5cf6
+  );
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #a8b0c0;
+  font-size: 14px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  background: #22c55e;
+
+  box-shadow:
+    0 0 10px #22c55e;
+}
+
+/* Main */
+
+.container {
+  width: min(1000px, 92%);
+  margin: auto;
+}
+
+/* Hero */
+
+.hero {
+  min-height: calc(100vh - 72px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  padding-top: 90px;
+}
+
+.badge {
+  padding: 7px 14px;
+
+  border-radius: 30px;
+
+  background: #151a2a;
+  border: 1px solid #282f45;
+
+  color: #9da7ff;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hero h1 {
+  margin-top: 25px;
+
+  font-size: clamp(42px, 7vw, 72px);
+  line-height: 1.05;
+  letter-spacing: -3px;
+}
+
+.hero h1 span {
+  background: linear-gradient(
+    90deg,
+    #818cf8,
+    #c084fc
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero > p {
+  max-width: 620px;
+
+  margin-top: 22px;
+
+  color: #929bad;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Upload */
+
+.upload-box {
+  width: min(620px, 100%);
+
+  margin-top: 45px;
+
+  padding: 50px 30px;
+
+  border: 1.5px dashed #414a67;
+  border-radius: 20px;
+
+  background: rgba(20, 25, 39, 0.7);
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.upload-box:hover {
+  border-color: #818cf8;
+  background: rgba(30, 35, 55, 0.8);
+  transform: translateY(-2px);
+}
+
+.upload-box input {
+  display: none;
+}
+
+.upload-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.upload-box h3 {
+  font-size: 19px;
+}
+
+.upload-box p {
+  margin-top: 8px;
+  color: #8d96a9;
+}
+
+.upload-box small {
+  display: block;
+
+  margin-top: 15px;
+
+  color: #616a7d;
+}
+
+/* Chat */
+
+.chat-section {
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+/* Document bar */
+
+.document-bar {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 14px 18px;
+
+  border: 1px solid #20283a;
+  border-radius: 14px;
+
+  background: #101522;
+}
+
+.document-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pdf-icon {
+  padding: 9px 7px;
+
+  border-radius: 7px;
+
+  background: #dc2626;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.document-info strong {
+  display: block;
+  font-size: 14px;
+}
+
+.document-info span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #737d91;
+  font-size: 12px;
+}
+
+.change-file {
+  padding: 8px 13px;
+
+  border: 1px solid #30394e;
+  border-radius: 8px;
+
+  color: #aab2c2;
+
+  font-size: 12px;
+
+  cursor: pointer;
+}
+
+.change-file input {
+  display: none;
+}
+
+/* Messages */
+
+.messages {
+  padding: 35px 5px;
+}
+
+.message {
+  display: flex;
+  gap: 14px;
+
+  margin-bottom: 30px;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #20283b;
+
+  color: #aeb7ff;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.message.user .avatar {
+  background: #272e42;
+  color: #d0d5df;
+}
+
+.message-content {
+  max-width: 800px;
+}
+
+.message-text {
+  line-height: 1.7;
+
+  color: #d8dce5;
+}
+
+.sources {
+  margin-top: 18px;
+}
+
+.sources h4 {
+  margin-bottom: 10px;
+
+  color: #8e98ad;
+  font-size: 12px;
+}
+
+.source {
+  padding: 12px;
+
+  margin-bottom: 8px;
+
+  border: 1px solid #222b3d;
+  border-radius: 10px;
+
+  background: #0e131e;
+
+  color: #858fa3;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Typing */
+
+.typing {
+  display: flex;
+  gap: 5px;
+
+  padding: 12px 0;
+}
+
+.typing span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #818cf8;
+
+  animation: blink 1.2s infinite;
+}
+
+.typing span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Question */
+
+.question-box {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 8px 8px 8px 16px;
+
+  border: 1px solid #30394e;
+  border-radius: 16px;
+
+  background: #101522;
+
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.question-box textarea {
+  flex: 1;
+
+  resize: none;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  padding: 10px 0;
+}
+
+.question-box textarea::placeholder {
+  color: #626c80;
+}
+
+.question-box button {
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 11px;
+
+  background: linear-gradient(
+    135deg,
+    #6366f1,
+    #8b5cf6
+  );
+
+  color: white;
+
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
+.question-box button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.disclaimer {
+  margin-top: 10px;
+
+  text-align: center;
+
+  color: #4f586b;
+
+  font-size: 11px;
+}
+
+/* Error */
+
+.error {
+  margin-top: 15px;
+
+  padding: 12px;
+
+  border: 1px solid #5f2525;
+  border-radius: 10px;
+
+  background: #2b1515;
+
+  color: #ff9b9b;
+
+  font-size: 13px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .hero {
+    padding-top: 60px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+    letter-spacing: -2px;
+  }
+
+  .hero > p {
+    font-size: 15px;
+  }
+
+  .upload-box {
+    padding: 40px 20px;
+  }
+
+  .document-bar {
+    gap: 10px;
+  }
+
+  .change-file {
+    font-size: 11px;
+  }
+
+}
